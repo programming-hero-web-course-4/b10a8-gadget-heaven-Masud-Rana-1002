@@ -1,8 +1,10 @@
 import { BsCart3 } from "react-icons/bs";
 import { CiHeart } from "react-icons/ci";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 
 const NavBar = () => {
+  const {pathname} = useLocation()
+ 
   const navManu = (
     <div className="space-x-12 font-bold">
       <NavLink>Home</NavLink>
@@ -12,7 +14,7 @@ const NavBar = () => {
   );
   return (
     <nav>
-      <div className="navbar text-white">
+      <div className={`navbar ${pathname == '/'? 'text-white':'text-black'}`}>
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

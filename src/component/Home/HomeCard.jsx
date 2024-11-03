@@ -1,5 +1,18 @@
+import { useContext, useEffect } from "react";
+import { Link } from "react-router-dom";
+import LevelContext from "../../ContextAPI/Context";
+
 const HomeCard = ({ data }) => {
  const { product_id, product_title, product_image, category, price, description, specification, availability, rating, other_field} = data
+ const {productDetails, setProductDetails} = useContext(LevelContext)
+  const handelData =(data)=>{
+    if(data){
+      setProductDetails([data])
+
+    }else{
+      return
+    }
+  }
 
   return (
     <div>
@@ -17,7 +30,7 @@ const HomeCard = ({ data }) => {
           <div className="">
             <span className="w-40  flex items-center justify-center bg-gradient-to-t p-px from-violetPrimary to-[#c264c4] rounded-full">
 
-            <button className="w-full text-lg font-semibold text-violetPrimary p-3 rounded-full border  bg-white">View Details</button>
+            <Link onClick={()=>handelData(data)} to='/ViewDetails' className="w-full text-lg font-semibold text-violetPrimary p-3 rounded-full border  bg-white">View Details</Link>
             </span>
           </div>
         </div>

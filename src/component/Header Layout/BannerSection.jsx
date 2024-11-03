@@ -1,10 +1,11 @@
 import React from "react";
+import { Outlet } from "react-router-dom";
 
 
 const BannerSection = () => {
   return (
     <div>
-      <div className="hero pt-12 pb-52">
+      <div className="hero pt-12 pb-52 bg-violetPrimary text-white -mt-16 container mx-auto  ">
         <div className="hero-content text-center">
           <div className="">
             <h1 className="text-5xl font-bold max-w-4xl mx-auto">Upgrade Your Tech Accessorize with Gadget Heaven Accessories</h1>
@@ -15,7 +16,7 @@ const BannerSection = () => {
           </div>
         </div>
       </div>
-    
+    <Outlet></Outlet>
     </div>
   );
 };
