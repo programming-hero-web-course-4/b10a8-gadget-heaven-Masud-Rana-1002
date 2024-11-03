@@ -1,0 +1,244 @@
+[
+    {
+      "product_id": "GHT001",
+      "product_title": "Laptop Pro 16",
+      "product_image": "https://example.com/images/laptop_pro_16.jpg",
+      "category": "Computers",
+      "price": 1299,
+      "description": "Powerful laptop with 16-inch display and advanced graphics for high performance.",
+      "specification": [
+        "16-inch Retina display",
+        "Intel i9 processor",
+        "1TB SSD storage"
+      ],
+      "availability": true,
+      "rating": 4.8,
+      "other_field": "Top-rated for productivity"
+    },
+    {
+      "product_id": "GHT002",
+      "product_title": "Gaming Desktop X1",
+      "product_image": "https://example.com/images/gaming_desktop_x1.jpg",
+      "category": "Computers",
+      "price": 1499,
+      "description": "High-performance gaming desktop with RGB lighting and powerful GPU.",
+      "specification": [
+        "Intel i7 processor",
+        "NVIDIA GTX 3070",
+        "16GB RAM"
+      ],
+      "availability": true,
+      "rating": 4.7
+    },
+    {
+      "product_id": "GHT003",
+      "product_title": "Tablet Pro",
+      "product_image": "https://example.com/images/tablet_pro.jpg",
+      "category": "Computers",
+      "price": 599,
+      "description": "Portable tablet with vibrant display, perfect for work and entertainment.",
+      "specification": [
+        "10.5-inch Retina display",
+        "128GB storage",
+        "8MP camera"
+      ],
+      "availability": false,
+      "rating": 4.4
+    },
+    {
+      "product_id": "GHT004",
+      "product_title": "Smartphone X",
+      "product_image": "https://example.com/images/smartphone_x.jpg",
+      "category": "Phones",
+      "price": 699,
+      "description": "Next-gen smartphone with stunning camera and fast processor.",
+      "specification": [
+        "6.1-inch OLED display",
+        "128GB storage",
+        "12MP dual camera"
+      ],
+      "availability": true,
+      "rating": 4.5
+    },
+    {
+      "product_id": "GHT005",
+      "product_title": "Smartphone XL 5G",
+      "product_image": "https://example.com/images/smartphone_xl_5g.jpg",
+      "category": "Phones",
+      "price": 899,
+      "description": "5G-enabled smartphone with large screen and exceptional battery life.",
+      "specification": [
+        "6.7-inch AMOLED display",
+        "256GB storage",
+        "Dual 12MP rear camera"
+      ],
+      "availability": true,
+      "rating": 4.6
+    },
+    {
+      "product_id": "GHT006",
+      "product_title": "Budget Smartphone Z",
+      "product_image": "https://example.com/images/budget_smartphone_z.jpg",
+      "category": "Phones",
+      "price": 299,
+      "description": "Affordable smartphone with all essential features.",
+      "specification": [
+        "5.8-inch LCD display",
+        "64GB storage",
+        "Single-lens camera"
+      ],
+      "availability": false,
+      "rating": 4.2
+    },
+    {
+      "product_id": "GHT007",
+      "product_title": "Smartwatch Series 5",
+      "product_image": "https://example.com/images/smartwatch_series_5.jpg",
+      "category": "Smart Watches",
+      "price": 249,
+      "description": "Smartwatch with health tracking and customizable watch faces.",
+      "specification": [
+        "1.5-inch AMOLED display",
+        "Heart rate monitor",
+        "GPS"
+      ],
+      "availability": true,
+      "rating": 4.4
+    },
+    {
+      "product_id": "GHT008",
+      "product_title": "Fitness Watch Pro",
+      "product_image": "https://example.com/images/fitness_watch_pro.jpg",
+      "category": "Smart Watches",
+      "price": 199,
+      "description": "Fitness-focused smartwatch with waterproof design and extended battery life.",
+      "specification": [
+        "1.3-inch OLED display",
+        "Steps and calorie counter",
+        "Waterproof up to 50m"
+      ],
+      "availability": true,
+      "rating": 4.3
+    },
+    {
+      "product_id": "GHT009",
+      "product_title": "Fast Charger 30W",
+      "product_image": "https://example.com/images/fast_charger_30w.jpg",
+      "category": "Chargers",
+      "price": 59,
+      "description": "High-speed wall charger with 30W output, compatible with all devices.",
+      "specification": [
+        "USB-C port",
+        "30W output",
+        "Compatible with USB-PD"
+      ],
+      "availability": true,
+      "rating": 4.6
+    },
+    {
+      "product_id": "GHT010",
+      "product_title": "Wireless Charger Pad",
+      "product_image": "https://example.com/images/wireless_charger_pad.jpg",
+      "category": "Chargers",
+      "price": 79,
+      "description": "Sleek wireless charger for hassle-free charging experience.",
+      "specification": [
+        "10W output",
+        "Qi-certified",
+        "Non-slip surface"
+      ],
+      "availability": false,
+      "rating": 4.4
+    },
+    {
+      "product_id": "GHT011",
+      "product_title": "Portable Charger 10000mAh",
+      "product_image": "https://example.com/images/portable_charger_10000.jpg",
+      "category": "Power Banks",
+      "price": 99,
+      "description": "Portable power bank with fast charging and compact design.",
+      "specification": [
+        "10000mAh capacity",
+        "Dual USB output",
+        "Slim design"
+      ],
+      "availability": true,
+      "rating": 4.5
+    },
+    {
+      "product_id": "GHT012",
+      "product_title": "High-Capacity Power Bank 20000mAh",
+      "product_image": "https://example.com/images/high_capacity_power_bank.jpg",
+      "category": "Power Banks",
+      "price": 149,
+      "description": "High-capacity power bank for extended use, ideal for travelers.",
+      "specification": [
+        "20000mAh capacity",
+        "Fast charging",
+        "Multiple device compatibility"
+      ],
+      "availability": true,
+      "rating": 4.7
+    },
+    {
+      "product_id": "GHT013",
+      "product_title": "Laptop Sleeve 15-inch",
+      "product_image": "https://example.com/images/laptop_sleeve.jpg",
+      "category": "Accessories",
+      "price": 65,
+      "description": "Protective laptop sleeve with soft interior and water-resistant exterior.",
+      "specification": [
+        "15-inch compatibility",
+        "Water-resistant",
+        "Soft interior lining"
+      ],
+      "availability": true,
+      "rating": 4.3
+    },
+    {
+      "product_id": "GHT014",
+      "product_title": "Bluetooth Earbuds S1",
+      "product_image": "https://example.com/images/bluetooth_earbuds_s1.jpg",
+      "category": "Accessories",
+      "price": 129,
+      "description": "Compact wireless earbuds with crystal-clear sound and comfortable fit.",
+      "specification": [
+        "Bluetooth 5.0",
+        "Noise cancellation",
+        "6-hour playtime"
+      ],
+      "availability": true,
+      "rating": 4.6
+    },
+    {
+      "product_id": "GHT015",
+      "product_title": "USB-C Cable 1m",
+      "product_image": "https://example.com/images/usb_c_cable.jpg",
+      "category": "Accessories",
+      "price": 50,
+      "description": "Durable USB-C cable compatible with fast-charging devices.",
+      "specification": [
+        "1 meter length",
+        "Fast-charging support",
+        "Nylon braided"
+      ],
+      "availability": true,
+      "rating": 4.4
+    },
+    {
+      "product_id": "GHT016",
+      "product_title": "Wireless Keyboard Combo",
+      "product_image": "https://example.com/images/wireless_keyboard_combo.jpg",
+      "category": "Accessories",
+      "price": 89,
+      "description": "Wireless keyboard and mouse combo with long battery life.",
+      "specification": [
+        "Wireless connectivity",
+        "Ergonomic design",
+        "Multi-device support"
+      ],
+      "availability": true,
+      "rating": 4.5
+    }
+  ]
+  
