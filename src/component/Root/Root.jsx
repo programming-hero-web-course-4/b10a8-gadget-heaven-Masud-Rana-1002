@@ -17,7 +17,9 @@ const Root = () => {
             <FloatingBanner></FloatingBanner>
           </div>
        
-      <Outlet></Outlet>
+     <div className="px-12">
+     <Outlet></Outlet>
+     </div>
       </div>
     </div>
   );

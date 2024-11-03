@@ -8,6 +8,8 @@ export default {
     extend: {
       colors:{
         'violetPrimary': '#9538E2',
+        'card-bg': '#D9D9D9',
+        'body-bg': '#F7F7F7'
             },
     },
   

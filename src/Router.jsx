@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Root from "./component/Root/Root";
-import BannerSection from "./component/Header Layout/BannerSection";
+
+import Home from "./component/Home/Home";
 
 const router = createBrowserRouter([
     {
@@ -9,7 +10,8 @@ const router = createBrowserRouter([
       children: [
         {
             path:"/",
-            // element: <BannerSection></BannerSection>,
+            element: <Home></Home>,
+            loader: ()=> fetch('./../public/productData.json') 
         }
       ]
     },
