@@ -5,9 +5,9 @@ import LevelContext from "../../ContextAPI/Context";
 const HomeCard = ({ data }) => {
  const { product_id, product_title, product_image, category, price, description, specification, availability, rating, other_field} = data
  const {productDetails, setProductDetails} = useContext(LevelContext)
-  const handelData =(data)=>{
+  const handelData =(datas)=>{
     if(data){
-      setProductDetails([data])
+      setProductDetails([datas])
 
     }else{
       return

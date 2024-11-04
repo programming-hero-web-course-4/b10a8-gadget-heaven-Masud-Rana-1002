@@ -5,6 +5,7 @@ import Home from "./component/Home/Home";
 import ViewDetailsCard from "./component/Home/ViewDetailsCard";
 import FloatingBanner from "./component/Header Layout/FloatingBanner";
 import BannerSection from "./component/Header Layout/BannerSection";
+import Dashboard from "./component/Dashboard/Dashboard";
 
 const router = createBrowserRouter([
     {
@@ -14,9 +15,7 @@ const router = createBrowserRouter([
         {
             path:"/",
             element: <Home></Home>,
-           
-           
-            loader: ()=> fetch('./../public/productData.json') ,
+            loader: ()=> fetch('../productData.json') ,
             children:[{
               path:"/",
               element:  <BannerSection></BannerSection>,
@@ -33,6 +32,8 @@ const router = createBrowserRouter([
           ]
         },
         {
+          path: '/Dashboard',
+          element: <Dashboard></Dashboard>,
           
       
         },

@@ -1,20 +1,22 @@
 [
-    {
-      "product_id": "GHT001",
-      "product_title": "Laptop Pro 16",
-      "product_image": "https://i.ibb.co/MV1w6hw/111901-mbp16-gray.png",
-      "category": "Laptops",
-      "price": 1299,
-      "description": "Powerful laptop with 16-inch display and advanced graphics for high performance.",
-      "specification": [
-        "16-inch Retina display",
-        "Intel i9 processor",
-        "1TB SSD storage"
-      ],
-      "availability": true,
-      "rating": 4.8,
-      "other_field": "Top-rated for productivity"
-    },
+  {
+    "product_id": "GHT001",
+    "product_title": "HP Laptop 15-fd0029nx",
+    "product_image": "https://i.ibb.co/SdsnbvW/71l-Fdrzc-Bn-L-AC-SX679-removebg-preview.png",
+    "category": "Laptops",
+    "price": 999,
+    "description": "Enjoy the sun and your favorite content with this anti-glare panel.",
+    "specification": [
+      "13.3-inch Retina display",
+      "Intel Core i5",
+      "8GB RAM",
+      "256GB SSD storage"
+    ],
+    "availability": true,
+    "rating": 4.7,
+    "other_field": "Best for students"
+  },
+
     {
       "product_id": "GHT002",
       "product_title": "Gaming Desktop X1",
@@ -200,7 +202,7 @@
     {
       "product_id": "GHT014",
       "product_title": "Apple 2023 MacBook Pro ",
-      "product_image": "https://i.ibb.co/0Q9rCZr/111901-mbp16-gray-removebg-preview.png",
+      "product_image": "https://i.ibb.co/Ms3zCch/61l-AGP5afp-L-AC-SX679-1-removebg-preview.png",
       "category": "Laptops",
       "price": 1999,
       "description": "The new 14-inch MacBook Pro with M1 Pro chip delivers exceptional speed and power for professional workloads.",
@@ -216,21 +218,20 @@
     },
     {
       "product_id": "GHT015",
-      "product_title": "HP Laptop 15-fd0029nx",
-      "product_image": "https://i.ibb.co/SdsnbvW/71l-Fdrzc-Bn-L-AC-SX679-removebg-preview.png",
+      "product_title": "Laptop Pro 16",
+      "product_image": "https://i.ibb.co/MV1w6hw/111901-mbp16-gray.png",
       "category": "Laptops",
-      "price": 999,
-      "description": "Enjoy the sun and your favorite content with this anti-glare panel.",
+      "price": 1299,
+      "description": "Powerful laptop with 16-inch display and advanced graphics for high performance.",
       "specification": [
-        "13.3-inch Retina display",
-        "Intel Core i5",
-        "8GB RAM",
-        "256GB SSD storage"
+        "16-inch Retina display",
+        "Intel i9 processor",
+        "1TB SSD storage"
       ],
       "availability": true,
-      "rating": 4.7,
-      "other_field": "Best for students"
+      "rating": 4.8,
+      "other_field": "Top-rated for productivity"
     }
-
+   
   ]
   

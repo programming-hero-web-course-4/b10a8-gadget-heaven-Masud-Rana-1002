@@ -16,7 +16,7 @@ const ViewDetailsCard = () => {
         </div>
         <div>
             {
-                productDetails.map((data)=> <DetailsCard data={data}></DetailsCard>)
+                productDetails.map((data)=> <DetailsCard key={data.product_id} data={data}></DetailsCard>)
             }
         </div>
      </div>

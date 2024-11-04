@@ -1,20 +1,27 @@
+import { useContext } from "react";
 import { BsCart3 } from "react-icons/bs";
 import { CiHeart } from "react-icons/ci";
 import { Link, NavLink, useLocation } from "react-router-dom";
+import LevelContext from "../../ContextAPI/Context";
+
 
 const NavBar = () => {
-  const {pathname} = useLocation()
- 
+
+
+  const {countCart, setcountCart} = useContext(LevelContext)
+  const { WishlistDatas, setWishlistData } = useContext(LevelContext);
+const { pathname } = useLocation();
+
   const navManu = (
     <div className="space-x-12 font-bold">
-      <NavLink>Home</NavLink>
-      <NavLink>Statistics</NavLink>
-      <NavLink>Dashboard</NavLink>
+      <NavLink className={` ${pathname == '/'? 'text-white':'text-black'}`} to='/'>Home</NavLink>
+      <NavLink className={` ${pathname == '/Dashboard'? 'text-violetPrimary':''}`} to='/'>Statistics</NavLink>
+      <NavLink className={` ${pathname == '/Dashboard'? 'text-violetPrimary':''}`} to='/Dashboard'>Dashboard</NavLink>
     </div>
   );
   return (
-    <nav>
-      <div className={`navbar ${pathname == '/'? 'text-white':'text-black'}`}>
+    <nav className="">
+      <div className={`navbar ${pathname == '/'? '':''}`}>
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -45,7 +52,7 @@ const NavBar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{navManu}</ul>
         </div>
-        <div className="navbar-end text-xl space-x-4"><span className="bg-white text-black p-2 w-10 h-10 rounded-full flex items-center justify-center ">{<BsCart3 />}</span><span className="bg-white text-black p-2 w-10 h-10 rounded-full flex items-center justify-center ">{ <CiHeart />}</span></div>
+        <div className="navbar-end text-xl space-x-4"><span className="bg-white text-black p-2 w-10 h-10 rounded-full flex items-center justify-center ">{countCart}{<BsCart3 />}</span><span className="bg-white text-black p-2 w-10 h-10 rounded-full flex items-center justify-center ">{ <CiHeart />} {WishlistDatas.length}</span></div>
       </div>
     </nav>
   );

@@ -1,4 +1,4 @@
-import { Link, NavLink, Outlet, useLoaderData } from "react-router-dom";
+import { Link,  Outlet, useLoaderData } from "react-router-dom";
 import HomeCard from "./HomeCard";
 import { useEffect, useState } from "react";
 
@@ -8,47 +8,41 @@ const Home = () => {
     numItemShow:9,
     toggleBtnCondition : false
   })
-  const [x , setx ]=useState([])
+  const [sortByCategories , setSortByCategories ]=useState([])
   const showData = [...productData].slice(0, defaultShow.numItemShow)
 useEffect(()=>{
-  setx(showData)
+  setSortByCategories(showData)
 },[defaultShow])
+const [sideBarBtnStyle, setSideBarBtnStyle] = useState('')
 
-//  const defaultShowBtn = ()=>{
-//   if(defaultShow.toggleBtnCondition === false){
-//     setdefaultShow({
-//       numItemShow :productData.length,
-//       toggleBtnCondition : !defaultShow.toggleBtnCondition
-//     })
-//   }else{
-//     setdefaultShow({
-//       numItemShow:9,
-//       toggleBtnCondition : !defaultShow.toggleBtnCondition
-//     })
-//   }
-//  }
  const displayProductByCategori =(CategoriName)=>{
     if(CategoriName=== 'All Product'){
+      setSideBarBtnStyle('All Product')
       setdefaultShow({
         numItemShow :productData.length,
         toggleBtnCondition : !defaultShow.toggleBtnCondition
       })
+
     }else if(CategoriName === 'Laptops'){
+      setSideBarBtnStyle('Laptops')
       const laptops = productData.filter((p)=> p.category === 'Laptops' )
-      setx(laptops)
+      setSortByCategories(laptops)
     }else if(CategoriName === 'Phones'){
+      setSideBarBtnStyle('Phones')
       const phones = productData.filter((p)=> p.category === 'Phones' )
-      setx(phones)
+      setSortByCategories(phones)
     }else if(CategoriName === 'Accessories'){
+      setSideBarBtnStyle('Accessories')
       const Accessories = productData.filter((p)=> p.category === 'Accessories' )
-      setx(Accessories)
+      setSortByCategories(Accessories)
     }
     else if(CategoriName === 'Smart Watches'){
+      setSideBarBtnStyle('Smart Watches')
       const SmartWatchess = productData.filter((p)=> p.category === 'Smart Watches' )
-      setx(SmartWatchess )
+      setSortByCategories(SmartWatchess )
     }
  }
-// console.log(defaultShow.toggleBtnCondition)
+
   return (
     
     <div className="container w-11/12  mx-auto">
@@ -56,33 +50,33 @@ useEffect(()=>{
       <h2 className="text-center text-4xl font-bold mb-12">
         Explore Cutting-Edge Gadgets
       </h2>
-    
+      {/* text-white bg-violetPrimary  font-bold  */}
       <div className="space-x-6 flex items-start ">
         <div className="bg-white w-3/12 flex flex-col items-center justify-center space-y-6 py-6 rounded-lg border ">
-          <NavLink onClick={()=> displayProductByCategori('All Product')} className="text-[#09080F99] py-2 px-7 bg-[#f2f2f3] rounded-full text-lg font-medium w-44">
+          <Link onClick={()=> displayProductByCategori('All Product')} className={ `${sideBarBtnStyle=== 'All Product'? 'text-white bg-violetPrimary  font-bold':''} text-[#09080F99] py-2 px-7 bg-[#f2f2f3] rounded-full text-lg font-medium w-44`}>
           All Product
-          </NavLink>
-          <NavLink onClick={()=> displayProductByCategori('Laptops')} className="text-[#09080F99] px-6 py-3  bg-[#f2f2f3] rounded-full  text-lg font-medium w-48">
+          </Link>
+          <Link onClick={()=> displayProductByCategori('Laptops')} className={ `${sideBarBtnStyle=== 'Laptops'? 'text-white bg-violetPrimary  font-bold':''} text-[#09080F99] py-2 px-7 bg-[#f2f2f3] rounded-full text-lg font-medium w-44`}>
           Laptops
-          </NavLink>
-          <NavLink onClick={()=> displayProductByCategori('Phones')}  className="text-[#09080F99] px-6 py-3  bg-[#f2f2f3] rounded-full  text-lg font-medium w-48 ">
+          </Link>
+          <Link onClick={()=> displayProductByCategori('Phones')}  className={ `${sideBarBtnStyle=== 'Phones'? 'text-white bg-violetPrimary  font-bold':''} text-[#09080F99] py-2 px-7 bg-[#f2f2f3] rounded-full text-lg font-medium w-44`}>
           Phones
-          </NavLink>
-          <NavLink onClick={()=> displayProductByCategori('Accessories')} className="text-[#09080F99] px-6 py-3  bg-[#f2f2f3] rounded-full  text-lg font-medium w-48">
+          </Link>
+          <Link onClick={()=> displayProductByCategori('Accessories')}className={ `${sideBarBtnStyle=== 'Accessories'? 'text-white bg-violetPrimary  font-bold':''} text-[#09080F99] py-2 px-7 bg-[#f2f2f3] rounded-full text-lg font-medium w-44`}>
           Accessories
-          </NavLink>
-          <NavLink onClick={()=> displayProductByCategori('Smart Watches')} className="text-[#09080F99] px-6 py-3  bg-[#f2f2f3] rounded-full  text-full font-bold w-48">
+          </Link>
+          <Link onClick={()=> displayProductByCategori('Smart Watches')} className={ `${sideBarBtnStyle=== 'Smart Watches'? 'text-white bg-violetPrimary  font-bold':''} text-[#09080F99] py-2 px-7 bg-[#f2f2f3] rounded-full text-lg font-medium w-44`}>
           Smart Watches
-          </NavLink>
-          <NavLink onClick={()=> displayProductByCategori(' MacBook')} className="text-[#09080F99] px-6 py-3  bg-[#f2f2f3] rounded-full  text-lg font-medium w-48">
+          </Link>
+          <Link onClick={()=> displayProductByCategori(' MacBook')} className={ `${sideBarBtnStyle=== 'MacBook'? 'text-white bg-violetPrimary  font-bold':''} text-[#09080F99] py-2 px-7 bg-[#f2f2f3] rounded-full text-lg font-medium w-44`}>
           MacBook
-          </NavLink>
-          <NavLink onClick={()=> displayProductByCategori('Iphone')} className="text-[#09080F99] px-6 py-3  bg-[#f2f2f3] rounded-full  text-lg font-medium w-48">
+          </Link>
+          <Link onClick={()=> displayProductByCategori('Iphone')} className={ `${sideBarBtnStyle=== 'Iphone'? 'text-white bg-violetPrimary  font-bold':''} text-[#09080F99] py-2 px-7 bg-[#f2f2f3] rounded-full text-lg font-medium w-44`}>
           Iphone
-          </NavLink>
+          </Link>
         </div>
         <div className="w-9/12 grid grid-cols-3 gap-4">
-       {x.map(data =>  <HomeCard key={data.product_id} data={data}></HomeCard>)}
+          { sortByCategories.map(data =>  <HomeCard key={data.product_id} data={data}></HomeCard>)}
         </div>
       </div>
       
