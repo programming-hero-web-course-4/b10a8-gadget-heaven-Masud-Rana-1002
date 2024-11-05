@@ -6,11 +6,14 @@ import ViewDetailsCard from "./component/Home/ViewDetailsCard";
 import FloatingBanner from "./component/Header Layout/FloatingBanner";
 import BannerSection from "./component/Header Layout/BannerSection";
 import Dashboard from "./component/Dashboard/Dashboard";
+import Statistics from "./component/Statistics/Statistics";
+import Error from "./component/ErrorPage/Error";
 
 const router = createBrowserRouter([
     {
       path: "/",
       element: <Root></Root>,
+      errorElement: <Error></Error>,
       children: [
         {
             path:"/",
@@ -38,7 +41,8 @@ const router = createBrowserRouter([
       
         },
         {
-            path:"/",
+            path:"/Statistics",
+            element: <Statistics></Statistics>
             
       
         },

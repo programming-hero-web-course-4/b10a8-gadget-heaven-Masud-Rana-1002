@@ -1,11 +1,13 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import LevelContext from "../../ContextAPI/Context";
 import { Link } from "react-router-dom";
 import { CiHeart } from "react-icons/ci";
 
 import ReactStars from "react-rating-stars-component";
 import React from "react";
-import { render } from "react-dom";
+
+import { ToastContainer, toast } from 'react-toastify';
+
 const DetailsCard = ({ data }) => {
   const {
     product_id,
@@ -21,18 +23,36 @@ const DetailsCard = ({ data }) => {
   } = data;
   const { detailsCard, setDetailsCard } = useContext(LevelContext);
   const { WishlistDatas, setWishlistData } = useContext(LevelContext);
+  const { countCart, setcountCart } = useContext(LevelContext);
+  const [heartIconDisabled,  setHeartIconDisabled]= useState(true)
   const setCartData = (data) => {
     setDetailsCard([...detailsCard, data]);
-  };
+    toast.success('Great choice! It’s now in your cart.')
+    
+    
+  }
+  useEffect(()=>{
+    setcountCart(detailsCard.length)
+  },[detailsCard])
   const sendWishlistData = (WishlistData) => {
-    setWishlistData([...WishlistDatas, WishlistData]);
+    if(heartIconDisabled){
+      setWishlistData([...WishlistDatas, WishlistData]);
+      setHeartIconDisabled(false)
+      toast.success('This item has been added to your Wishlist!')
+      
+    }else{
+      toast.warn('This item is already in your Wishlist!”')
+      return
+    }
+
   };
    
 const ratingChanged = (newRating) => {
   console.log(newRating);
 };
+
   return (
-    <div className="w-8/12 border -mt-48 border-white mx-auto h-[550px] bg-white py-8 px-4 rounded-2xl mb-24">
+    <div className="w-8/12  border -mt-48 border-white mx-auto h-[550px] bg-white py-8 px-4 rounded-2xl mb-24">
       <div className="flex gap-7">
         <div className="w-4/12">
           <img src={product_image} alt="" />
@@ -77,14 +97,14 @@ const ratingChanged = (newRating) => {
          </div>
           </div>
           <div className="flex items-center gap-3">
-            <Link
+            <button
               onClick={() => setCartData(data)}
-              to="/Dashboard"
+             
               className="text-white py-2 px-7 bg-violetPrimary rounded-full text-lg font-bold "
             >
               Add To Card
-            </Link>
-            <div onClick={()=> sendWishlistData(data) } className="w-12 h-12 rounded-full border flex justify-center items-center text-6xl p-1">
+            </button>
+            <div  onClick={()=> sendWishlistData(data) } className= {`${heartIconDisabled ===true ? '' : 'disabled:opacity-75 bg-gray-300 text-white '} w-12 h-12 rounded-full border flex justify-center items-center text-6xl p-1 cursor-pointer`}>
               <CiHeart />
             </div>
           </div>

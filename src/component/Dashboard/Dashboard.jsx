@@ -12,7 +12,8 @@ const Dashboard = () => {
   const { countCart, setcountCart } = useContext(LevelContext);
   const { detailsCard, setDetailsCard } = useContext(LevelContext);
   const { WishlistDatas, setWishlistData } = useContext(LevelContext);
-// console.log(WishlistDatas)
+  const { sentTotalPriceModal, setsentTotalPriceModal } = useContext(LevelContext);
+  // console.log(WishlistDatas)
   // onClick fir toggol Btn
   const cartItem = (id) => {
     if (toggol) {
@@ -21,30 +22,33 @@ const Dashboard = () => {
       settoggolbtn(id);
     }
   };
-
-  //  set Data
-  useEffect(() => {
-    const addToCardData = detailsCard;
-    if (addToCardData) {
-      setCartData([...cardData, ...addToCardData]);
-    }
-  }, []);
+  const sortByPrice = () => {
+    const sortedData = [...detailsCard].sort((a, b) =>  b.price - a.price ); // Ascending order
+    setCartData(sortedData);
+    setDetailsCard(sortedData);
+  };
 
   useEffect(() => {
     const total = detailsCard.reduce((sum, product) => sum + product.price, 0);
-
     setProductPrice(total);
     setcountCart(detailsCard.length);
+    setsentTotalPriceModal(total)
   }, [detailsCard]);
 
+  const purchase =()=>{
+    document.getElementById("my_modal_1").showModal()
+    setProductPrice(0)
+    setcountCart(0)
+  
+
+   
+  }
   return (
     <div className="min-h-[calc(100 vh - 530px)]">
       <div className="bg-violetPrimary w-full">
         <div className="flex container w-11/12 flex-col items-center  max-w-2xl mx-auto space-y-32 pt-12 pb-20">
           <div className="text-center text-white ">
-            <h2 className="font-bold text-3xl">
-              Dashboard
-            </h2>
+            <h2 className="font-bold text-3xl">Dashboard</h2>
             <p>
               Explore the latest gadgets that will take your experience to the
               next level. From smart devices to the coolest accessories, we have
@@ -84,27 +88,18 @@ const Dashboard = () => {
             <p className="font-bold text-2xl">Total cost: {productPrice}</p>
             <div className="flex gap-2">
               <span className="w-52  flex items-center justify-center bg-gradient-to-t p-px from-violetPrimary to-[#c264c4] rounded-full">
-                <Link
-                  onClick={() => handelData(data)}
-                  to="/ViewDetails"
-                  className="w-full flex gap-2 items-center justify-center text-lg font-semibold text-violetPrimary p-3 rounded-full border  bg-white"
-                >
-                  Sort by Price <AiOutlineControl className="text-3xl"/>
-
-                </Link>
+                <button 
+                onClick={()=>sortByPrice()}
+                className="w-full flex gap-2 items-center justify-center text-lg font-semibold text-violetPrimary p-3 rounded-full border  bg-white">
+                  Sort by Price <AiOutlineControl className="text-3xl" />
+                </button>
               </span>
               <span className="w-40  flex items-center justify-center  p-px  rounded-full">
-                <Link
-                  onClick={() => handelData(data)}
-                  to="/ViewDetails"
-                  className="w-full flex gap-2 items-center justify-center text-lg font-semibold text-white p-3 rounded-full border  bg-gradient-to-t from-violetPrimary to-[#c264c4] "
-                >
+                <button onClick={()=>purchase()} className="w-full flex gap-2 items-center justify-center text-lg font-semibold text-white p-3 rounded-full border  bg-gradient-to-t from-violetPrimary to-[#c264c4] ">
                   Purchase
-
-                </Link>
+                </button>
               </span>
             </div>
-           
           </div>
         ) : (
           ""
@@ -115,9 +110,9 @@ const Dashboard = () => {
           ? detailsCard.map((data) => (
               <AddCartCard key={data.product_id} data={data}></AddCartCard>
             ))
-          :  WishlistDatas.map((data) => (
-            <AddCartCard key={data.product_id} data={data}></AddCartCard>
-          ))}
+          : WishlistDatas.map((data) => (
+              <AddCartCard key={data.product_id} data={data}></AddCartCard>
+            ))}
       </div>
     </div>
   );

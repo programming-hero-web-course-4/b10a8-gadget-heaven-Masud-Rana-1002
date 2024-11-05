@@ -41,43 +41,66 @@ const [sideBarBtnStyle, setSideBarBtnStyle] = useState('')
       const SmartWatchess = productData.filter((p)=> p.category === 'Smart Watches' )
       setSortByCategories(SmartWatchess )
     }
+    else if(CategoriName === 'MacBook'){
+      setSideBarBtnStyle('MacBook')
+      const MacBook = productData.filter((p)=> p.brand === 'MacBook' )
+      setSortByCategories(MacBook )
+    }
+    else if(CategoriName === 'Iphone'){
+      setSideBarBtnStyle('Iphone')
+      const iPhone = productData.filter((p)=> p.brand === 'iPhone' )
+      setSortByCategories(iPhone)
+    }
+    else if(CategoriName === 'Camera'){
+      setSideBarBtnStyle('Camera')
+      const Camera = productData.filter((p)=> p.category === 'Camera' )
+      setSortByCategories(Camera)
+    }
  }
 
   return (
     
     <div className="container w-11/12  mx-auto">
       <Outlet></Outlet>
+ 
       <h2 className="text-center text-4xl font-bold mb-12">
         Explore Cutting-Edge Gadgets
       </h2>
       {/* text-white bg-violetPrimary  font-bold  */}
       <div className="space-x-6 flex items-start ">
         <div className="bg-white w-3/12 flex flex-col items-center justify-center space-y-6 py-6 rounded-lg border ">
-          <Link onClick={()=> displayProductByCategori('All Product')} className={ `${sideBarBtnStyle=== 'All Product'? 'text-white bg-violetPrimary  font-bold':''} text-[#09080F99] py-2 px-7 bg-[#f2f2f3] rounded-full text-lg font-medium w-44`}>
+          <button onClick={()=> displayProductByCategori('All Product')} className={ `${sideBarBtnStyle=== 'All Product'? 'text-white bg-violetPrimary  font-bold':''} text-[#09080F99] py-2 px-7 bg-[#f2f2f3] rounded-full text-lg font-medium w-56`}>
           All Product
-          </Link>
-          <Link onClick={()=> displayProductByCategori('Laptops')} className={ `${sideBarBtnStyle=== 'Laptops'? 'text-white bg-violetPrimary  font-bold':''} text-[#09080F99] py-2 px-7 bg-[#f2f2f3] rounded-full text-lg font-medium w-44`}>
+          </button>
+          <button onClick={()=> displayProductByCategori('Laptops')} className={ `${sideBarBtnStyle=== 'Laptops'? 'text-white bg-violetPrimary  font-bold':''} text-[#09080F99] py-2 px-7 bg-[#f2f2f3] rounded-full text-lg font-medium w-56`}>
           Laptops
-          </Link>
-          <Link onClick={()=> displayProductByCategori('Phones')}  className={ `${sideBarBtnStyle=== 'Phones'? 'text-white bg-violetPrimary  font-bold':''} text-[#09080F99] py-2 px-7 bg-[#f2f2f3] rounded-full text-lg font-medium w-44`}>
+          </button>
+          <button onClick={()=> displayProductByCategori('Phones')}  className={ `${sideBarBtnStyle=== 'Phones'? 'text-white bg-violetPrimary  font-bold':''} text-[#09080F99] py-2 px-7 bg-[#f2f2f3] rounded-full text-lg font-medium w-56`}>
           Phones
-          </Link>
-          <Link onClick={()=> displayProductByCategori('Accessories')}className={ `${sideBarBtnStyle=== 'Accessories'? 'text-white bg-violetPrimary  font-bold':''} text-[#09080F99] py-2 px-7 bg-[#f2f2f3] rounded-full text-lg font-medium w-44`}>
+          </button>
+          <button onClick={()=> displayProductByCategori('Accessories')}className={ `${sideBarBtnStyle=== 'Accessories'? 'text-white bg-violetPrimary  font-bold':''} text-[#09080F99] py-2 px-7 bg-[#f2f2f3] rounded-full text-lg font-medium w-56`}>
           Accessories
-          </Link>
-          <Link onClick={()=> displayProductByCategori('Smart Watches')} className={ `${sideBarBtnStyle=== 'Smart Watches'? 'text-white bg-violetPrimary  font-bold':''} text-[#09080F99] py-2 px-7 bg-[#f2f2f3] rounded-full text-lg font-medium w-44`}>
+          </button>
+          <button onClick={()=> displayProductByCategori('Smart Watches')} className={ `${sideBarBtnStyle=== 'Smart Watches'? 'text-white bg-violetPrimary  font-bold':''} text-[#09080F99] py-2 px-7 bg-[#f2f2f3] rounded-full text-lg font-medium w-56`}>
           Smart Watches
-          </Link>
-          <Link onClick={()=> displayProductByCategori(' MacBook')} className={ `${sideBarBtnStyle=== 'MacBook'? 'text-white bg-violetPrimary  font-bold':''} text-[#09080F99] py-2 px-7 bg-[#f2f2f3] rounded-full text-lg font-medium w-44`}>
+          </button>
+          <button onClick={()=> displayProductByCategori('MacBook')} className={ `${sideBarBtnStyle=== 'MacBook'? 'text-white bg-violetPrimary  font-bold':''} text-[#09080F99] py-2 px-7 bg-[#f2f2f3] rounded-full text-lg font-medium w-56`}>
           MacBook
-          </Link>
-          <Link onClick={()=> displayProductByCategori('Iphone')} className={ `${sideBarBtnStyle=== 'Iphone'? 'text-white bg-violetPrimary  font-bold':''} text-[#09080F99] py-2 px-7 bg-[#f2f2f3] rounded-full text-lg font-medium w-44`}>
+          </button>
+          <button onClick={()=> displayProductByCategori('Iphone')} className={ `${sideBarBtnStyle=== 'Iphone'? 'text-white bg-violetPrimary  font-bold':''} text-[#09080F99] py-2 px-7 bg-[#f2f2f3] rounded-full text-lg font-medium w-56`}>
           Iphone
-          </Link>
+          </button>
+          <button onClick={()=> displayProductByCategori('Camera')} className={ `${sideBarBtnStyle=== 'Camera'? 'text-white bg-violetPrimary  font-bold':''} text-[#09080F99] py-2 px-7 bg-[#f2f2f3] rounded-full text-lg font-medium w-56`}>
+          Camera
+          </button>
         </div>
-        <div className="w-9/12 grid grid-cols-3 gap-4">
+        {
+          sortByCategories.length <= 0? <div className=" flex w-full  items-center justify-center flex-col " ><p className="text-4xl font-bold text-violet-600">No Data Found</p></div>:  <div className="w-9/12 grid grid-cols-3 gap-4">
+        
           { sortByCategories.map(data =>  <HomeCard key={data.product_id} data={data}></HomeCard>)}
         </div>
+        }
+       
       </div>
       
     </div>
