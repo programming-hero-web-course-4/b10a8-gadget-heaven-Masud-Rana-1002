@@ -1,6 +1,7 @@
 import { Link,  Outlet, useLoaderData } from "react-router-dom";
 import HomeCard from "./HomeCard";
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
   const productData = useLoaderData();
@@ -61,6 +62,7 @@ const [sideBarBtnStyle, setSideBarBtnStyle] = useState('')
   return (
     
     <div className="container w-11/12  mx-auto">
+  
       <Outlet></Outlet>
  
       <h2 className="text-center text-4xl font-bold mb-12">

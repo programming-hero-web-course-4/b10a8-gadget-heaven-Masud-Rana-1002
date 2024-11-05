@@ -21,7 +21,7 @@
     {
       "product_id": "GHT002",
       "product_title": "Gaming Desktop X1",
-      "product_image": "https://i.ibb.co/3yWqstr/png-clipart-intel-core-i7-gaming-computer-desktop-computers-desktop-pc-electronics-computer-removebg.png",
+      "product_image": "https://i.ibb.co/KKB4hpC/png-clipart-intel-core-i7-gaming-computer-desktop-computers-desktop-pc-electronics-computer-removebg.png",
       "brand": "Dell",
       "category": "Computers",
       "price": 1499,
@@ -37,7 +37,7 @@
     {
       "product_id": "GHT003",
       "product_title": "Tablet Pro",
-      "product_image": "https://i.ibb.co/gR8yZDZ/Tablet-Pro.png",
+      "product_image": " https://i.ibb.co/Sx7F2Px/Tablet-Pro-removebg-preview-min.png",
       "brand": "iPhone",
       "category": "Phones",
       "price": 599,
@@ -53,7 +53,7 @@
     {
       "product_id": "GHT004",
       "product_title": "Smartphone X",
-      "product_image": "https://i.ibb.co/7vSjfPT/Smartphone-X.png",
+      "product_image": "https://i.ibb.co/CBNbGJG/Smartphone-X-removebg-preview-min.png",
       "brand": "iPhone",
       "category": "Phones",
       "price": 699,
@@ -85,7 +85,7 @@
     {
       "product_id": "GHT006",
       "product_title": "Apple iPhone 16",
-      "product_image": "https://i.ibb.co/fdzWrYn/Apple-i-Phone-16-removebg-preview.png",
+      "product_image": " https://i.ibb.co/DrMpY6g/Apple-i-Phone-16-removebg-preview-min.png",
       "brand": "iPhone",
       "category": "Phones",
       "price": 299,
@@ -101,7 +101,7 @@
     {
       "product_id": "GHT007",
       "product_title": "Apple Watch Series 10 GPS",
-      "product_image": "https://i.ibb.co/jHD18qX/Apple-Watch-Series-10-GPS-removebg-preview.png",
+      "product_image": "https://i.ibb.co/Jtb86pF/Apple-Watch-Series-10-GPS-removebg-preview-min.png.png",
       "brand": "Appal",
       "category": "Smart Watches",
       "price": 249,
@@ -117,7 +117,7 @@
     {
       "product_id": "GHT008",
       "product_title": "Apple Watch SE (2nd Gen)",
-      "product_image": "https://i.ibb.co/W6PbXCP/Apple-Watch-SE-2nd-Gen-GPS-removebg-preview.png",
+      "product_image": "https://i.ibb.co/qFkgTYR/Apple-Watch-SE-2nd-Gen-GPS-removebg-preview-min.png.png",
       "brand": "Appal",
       "category": "Smart Watches",
       "price": 199,
@@ -133,7 +133,7 @@
     {
       "product_id": "GHT009",
       "product_title": "PINREK 268W Charging ",
-      "product_image": "https://i.ibb.co/4SgtxbK/61-Hn-Cl-GISAL-AC-SX300-SY300-QL70-ML2-removebg-preview.png",
+      "product_image": "https://i.ibb.co/vwpDqcC/Google-Pixel-9-Pro-XL-5-G-removebg-preview-min.png",
       "brand": "Normal",
       "category": "Accessories",
       "price": 59,
@@ -165,7 +165,7 @@
     {
       "product_id": "GHT011",
       "product_title": "Aluminium Laptop Stand",
-      "product_image": "https://i.ibb.co/dWnRjH7/81-CZGNZ-Kp-L-AC-SX679-removebg-preview.png",
+      "product_image": "https://i.ibb.co/g9d0Mj2/81-CZGNZ-Kp-L-AC-SX679-removebg-preview-min-1.png",
       "brand": "Normal",
       "category": "Power Banks",
       "price": 99,
@@ -181,7 +181,7 @@
     {
       "product_id": "GHT012",
       "product_title": "Gaming Keyboard Mouse",
-      "product_image": "https://i.ibb.co/ZGLRJRF/7193x0-PNms-L-AC-SX679-removebg-preview.png",
+      "product_image": "https://i.ibb.co/Hq8Q3nC/7193x0-PNms-L-AC-SX679-removebg-preview-min-1.png",
       "brand": "Normal",
       "category": "Accessories",
       "price": 149,
@@ -233,7 +233,7 @@
     {
       "product_id": "GHT015",
       "product_title": "Laptop Pro 16",
-      "product_image": "https://i.ibb.co/MV1w6hw/111901-mbp16-gray.png",
+      "product_image": "https://i.ibb.co/zrcN6rL/111901-mbp16-gray-removebg-preview-min.png",
       "brand": "MacBook",
       "category": "Laptops",
       "price": 1299,
@@ -249,4 +249,3 @@
     }
    
   ]
-  

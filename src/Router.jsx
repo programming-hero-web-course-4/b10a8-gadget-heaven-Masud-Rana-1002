@@ -8,6 +8,7 @@ import BannerSection from "./component/Header Layout/BannerSection";
 import Dashboard from "./component/Dashboard/Dashboard";
 import Statistics from "./component/Statistics/Statistics";
 import Error from "./component/ErrorPage/Error";
+import App from "./component/Statistics/Statistics";
 
 const router = createBrowserRouter([
     {
@@ -42,7 +43,8 @@ const router = createBrowserRouter([
         },
         {
             path:"/Statistics",
-            element: <Statistics></Statistics>
+            element: <App></App>,
+            loader: ()=> fetch('../productData.json')
             
       
         },
