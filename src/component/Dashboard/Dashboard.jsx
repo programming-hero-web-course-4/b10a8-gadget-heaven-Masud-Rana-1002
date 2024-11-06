@@ -3,6 +3,7 @@ import { Link, useLoaderData } from "react-router-dom";
 import AddCartCard from "./addCartCard";
 import LevelContext from "../../ContextAPI/Context";
 import { AiOutlineControl } from "react-icons/ai";
+import { Helmet } from "react-helmet-async";
 
 const Dashboard = () => {
   const [cardData, setCartData] = useState([]);
@@ -36,6 +37,9 @@ const Dashboard = () => {
   }, [detailsCard]);
 
   const purchase =()=>{
+    if(detailsCard.length === 0 ){
+return
+    }
     document.getElementById("my_modal_1").showModal()
     setProductPrice(0)
     setcountCart(0)
@@ -45,6 +49,10 @@ const Dashboard = () => {
   }
   return (
     <div className="min-h-[calc(100 vh - 530px)]">
+        <Helmet>
+     <title>Dashboard | Gadget Heaven</title>
+    
+     </Helmet>
       <div className="bg-violetPrimary w-full">
         <div className="flex container w-11/12 flex-col items-center  max-w-2xl mx-auto space-y-32 pt-12 pb-20">
           <div className="text-center text-white ">
@@ -94,8 +102,8 @@ const Dashboard = () => {
                   Sort by Price <AiOutlineControl className="text-3xl" />
                 </button>
               </span>
-              <span className="w-40  flex items-center justify-center  p-px  rounded-full">
-                <button onClick={()=>purchase()} className="w-full flex gap-2 items-center justify-center text-lg font-semibold text-white p-3 rounded-full border  bg-gradient-to-t from-violetPrimary to-[#c264c4] ">
+              <span  className="w-40  flex items-center justify-center  p-px  rounded-full">
+                <button onClick={()=>purchase()} className={` ${detailsCard.length <= 0?  '  bg-gray-300 ':'bg-gradient-to-t from-violetPrimary to-[#c264c4]  text-white' }w-full flex gap-2 items-center justify-center text-lg font-semibold p-3 rounded-full border text-white `}>
                   Purchase
                 </button>
               </span>

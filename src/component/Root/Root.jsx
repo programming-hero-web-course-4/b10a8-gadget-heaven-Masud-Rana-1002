@@ -21,6 +21,7 @@ const Root = () => {
 
         <div className="min-h-[calc(100vh - 518px)]">
           <Outlet></Outlet>
+          
         </div>
         <Footer></Footer>
       </div>

@@ -62,7 +62,10 @@ const [sideBarBtnStyle, setSideBarBtnStyle] = useState('')
   return (
     
     <div className="container w-11/12  mx-auto">
-  
+     <Helmet>
+     <title>Gadgets | Gadget Heaven</title>
+    
+     </Helmet>
       <Outlet></Outlet>
  
       <h2 className="text-center text-2xl md:text-4xl font-bold mb-12">

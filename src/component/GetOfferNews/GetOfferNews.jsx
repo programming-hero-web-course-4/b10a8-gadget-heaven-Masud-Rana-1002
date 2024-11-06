@@ -1,8 +1,13 @@
 import React from "react";
 import bannerImg from "../../assets/10780040_19197970-min.jpg";
+import { Helmet } from "react-helmet-async";
 const GetOfferNews = () => {
   return (
     <div>
+       <Helmet>
+     <title>Get Offer News | Gadget Heaven</title>
+    
+     </Helmet>
       <div className="bg-violetPrimary w-full">
         <div className="flex container w-11/12 flex-col items-center  max-w-2xl mx-auto space-y-32 pt-12 pb-20">
           <div className="text-center text-white ">

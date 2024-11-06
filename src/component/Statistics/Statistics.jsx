@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 import { useLoaderData } from "react-router-dom";
 import {
   ComposedChart,
@@ -14,11 +15,15 @@ import {
   ResponsiveContainer
 } from "recharts";
 
-export default function App() {
+export default function () {
   const data = useLoaderData();
 
   return (
  <div>
+    <Helmet>
+     <title>Statistics | Gadget Heaven</title>
+    
+     </Helmet>
      <div className="bg-violetPrimary w-full">
         <div className="flex container w-11/12 flex-col items-center  max-w-2xl mx-auto space-y-32 pt-12 pb-20">
           <div className="text-center text-white ">
