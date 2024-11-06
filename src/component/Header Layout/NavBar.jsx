@@ -42,6 +42,18 @@ const NavBar = () => {
       >
         Dashboard
       </NavLink>
+      <NavLink
+        className={` ${
+          pathname == "/GetOfferNews"
+            ? "lg:text-violetPrimary text-white"
+            : pathname == "/"
+            ? "text-white"
+            : "text-black"
+        }`}
+        to="/GetOfferNews"
+      >
+       Get Offer News
+      </NavLink>
     </div>
   );
   return (
