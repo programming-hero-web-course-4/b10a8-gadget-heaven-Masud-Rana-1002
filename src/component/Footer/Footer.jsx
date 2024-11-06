@@ -8,7 +8,7 @@ const Footer = () => {
                     <h4 className='text-3xl font-bold '>Gadget Heaven</h4>
                     <p className='font-semibold text-[#09080F99]'>Leading the way in cutting-edge technology and innovation.</p>
                 </div>
-                <div className='flex justify-around py-8'>
+                <div className='flex md:flex-row flex-col justify-around py-8'>
                     <div className='space-y-3'>
                         <h6 className='font-bold'>Services</h6>
                         <div className='text-[#09080F99] flex flex-col'>

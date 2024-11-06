@@ -65,12 +65,12 @@ const [sideBarBtnStyle, setSideBarBtnStyle] = useState('')
   
       <Outlet></Outlet>
  
-      <h2 className="text-center text-4xl font-bold mb-12">
+      <h2 className="text-center text-2xl md:text-4xl font-bold mb-12">
         Explore Cutting-Edge Gadgets
       </h2>
       {/* text-white bg-violetPrimary  font-bold  */}
-      <div className="space-x-6 flex items-start ">
-        <div className="bg-white w-3/12 flex flex-col items-center justify-center space-y-6 py-6 rounded-lg border ">
+      <div className="space-x-6 flex  items-start flex-col md:flex-row gap-6 md:gap-0">
+        <div className="bg-white w-full md:w-6/12 lg:w-3/12 flex flex-col items-center justify-center space-y-6 py-6 rounded-lg border ">
           <button onClick={()=> displayProductByCategori('All Product')} className={ `${sideBarBtnStyle=== 'All Product'? 'text-white bg-violetPrimary  font-bold':''} text-[#09080F99] py-2 px-7 bg-[#f2f2f3] rounded-full text-lg font-medium w-56`}>
           All Product
           </button>
@@ -97,7 +97,7 @@ const [sideBarBtnStyle, setSideBarBtnStyle] = useState('')
           </button>
         </div>
         {
-          sortByCategories.length <= 0? <div className=" flex w-full  items-center justify-center flex-col " ><p className="text-4xl font-bold text-violet-600">No Data Found</p></div>:  <div className="w-9/12 grid grid-cols-3 gap-4">
+          sortByCategories.length <= 0? <div className=" flex w-full  items-center justify-center flex-col " ><p className="text-4xl font-bold text-violet-600">No Data Found</p></div>:  <div className="w-11/12 md:w-9/12 mx-auto border grid grid-cols-1 lg:grid-cols-3 gap-4">
         
           { sortByCategories.map(data =>  <HomeCard key={data.product_id} data={data}></HomeCard>)}
         </div>

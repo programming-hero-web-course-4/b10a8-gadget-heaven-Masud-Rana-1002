@@ -8,7 +8,7 @@ const BannerSection = () => {
       <div className="hero rounded-lg pt-20 pb-52 bg-violetPrimary text-white -mt-16 container mx-auto  ">
         <div className="hero-content text-center">
           <div className="">
-            <h1 className="text-5xl font-bold max-w-4xl mx-auto">Upgrade Your Tech Accessorize with Gadget Heaven Accessories</h1>
+            <h1 className="md:text-5xl text-2xl font-bold max-w-4xl mx-auto">Upgrade Your Tech Accessorize with Gadget Heaven Accessories</h1>
             <p className="py-6 max-w-3xl mx-auto">
             Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!
             </p>

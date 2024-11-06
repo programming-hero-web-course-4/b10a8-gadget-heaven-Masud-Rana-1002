@@ -52,8 +52,8 @@ const ratingChanged = (newRating) => {
 };
 
   return (
-    <div className="w-8/12  border -mt-48 border-white mx-auto h-[550px] bg-white py-8 px-4 rounded-2xl mb-24">
-      <div className="flex gap-7">
+    <div className="w-8/12  border -mt-48 border-white mx-auto  bg-white py-8 px-4 rounded-2xl mb-24">
+      <div className="flex lg:flex-row flex-col items-center lg:items-start gap-7">
         <div className="w-4/12">
           <img src={product_image} alt="" />
         </div>

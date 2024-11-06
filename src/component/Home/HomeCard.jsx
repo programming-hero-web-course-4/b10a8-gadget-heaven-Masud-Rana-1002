@@ -16,8 +16,8 @@ const HomeCard = ({ data }) => {
 
   return (
     <div>
-      <div className="card bg-white  shadow-sm p-5 space-y-6 ">
-        <figure className="h-44 bg-card-bg rounded-md p-2">
+      <div className="card bg-white  shadow-sm p-5 space-y-6  ">
+        <figure className="h-64 lg:h-44 bg-card-bg rounded-md p-2">
           <img
           className="h-full"
             src={product_image}

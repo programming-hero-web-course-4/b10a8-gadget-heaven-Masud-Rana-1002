@@ -79,14 +79,14 @@ const Dashboard = () => {
           </div>
         </div>
       </div>
-      <div className="flex items-center justify-between container w-11/12 mx-auto mt-8">
+      <div className="flex flex-col md:flex-row items-center justify-between container w-11/12 mx-auto mt-8">
         <div>
           <p className="font-bold text-2xl ">{toggol ? "Cart" : "WishList"}</p>
         </div>
         {toggol ? (
-          <div className="flex items-center space-x-3 ">
+          <div className="flex items-center space-x-3 md:flex-row flex-col">
             <p className="font-bold text-2xl">Total cost: {productPrice}</p>
-            <div className="flex gap-2">
+            <div className="flex md:flex-row flex-col items-center gap-2">
               <span className="w-52  flex items-center justify-center bg-gradient-to-t p-px from-violetPrimary to-[#c264c4] rounded-full">
                 <button 
                 onClick={()=>sortByPrice()}

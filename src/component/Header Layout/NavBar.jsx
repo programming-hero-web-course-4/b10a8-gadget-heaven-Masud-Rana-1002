@@ -11,9 +11,9 @@ const NavBar = () => {
   const { pathname } = useLocation();
 
   const navManu = (
-    <div className="space-x-12 font-bold">
+    <div className="space-x-12 font-bold flex flex-col lg:flex-row">
       <NavLink
-        className={` ${pathname == "/" ? "border-b-2 pb-[1px]" : "text-black"}`}
+        className={` ${pathname == "/" ? "border-b-2 pb-[1px] " : "text-black "}`}
         to="/"
       >
         Home
@@ -21,7 +21,7 @@ const NavBar = () => {
       <NavLink
         className={` ${
           pathname == "/Statistics"
-            ? "text-violetPrimary"
+            ? "lg:text-violetPrimary text-white"
             : pathname == "/"
             ? "text-white"
             : "text-black"
@@ -33,7 +33,7 @@ const NavBar = () => {
       <NavLink
         className={` ${
           pathname == "/Dashboard"
-            ? "text-violetPrimary"
+            ? "lg:text-violetPrimary text-white"
             : pathname == "/"
             ? "text-white"
             : "text-black"
@@ -46,13 +46,13 @@ const NavBar = () => {
   );
   return (
     <nav className="">
-      <div className={`navbar ${pathname == "/" ? "" : ""}`}>
+      <div className={`navbar  ${pathname == "/" ? "" : ""} `}>
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
+                className={`${ pathname === '/'?'text-white': 'text-violetPrimary' } h-5 w-5 `}
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -67,12 +67,12 @@ const NavBar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+              className="menu backdrop-blur-xl text-center  bg-violetPrimary/5 menu-sm dropdown-content rounded-box z-[1] mt-3 w-52 p-2 shadow"
             >
               {navManu}
             </ul>
           </div>
-          <Link className={`${ pathname !=='/' ? 'text-black': 'text-white'} btn btn-ghost text-xl font-bold`}>Gadget Heaven</Link>
+          <Link className={`${ pathname !=='/' ? 'text-black': 'text-white'} btn btn-ghost md:text-xl font-bold`}>Gadget Heaven</Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{navManu}</ul>
